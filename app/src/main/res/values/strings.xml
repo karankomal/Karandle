@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Karandle</string>
+    <string name="title">KARANDLE</string>
+    <string name="difficulty_txt">Choose your difficulty!</string>
+</resources>

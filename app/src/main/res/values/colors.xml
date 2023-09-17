@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="pokemon_yellow">#FFDE00</color>
+    <color name="pokemon_yellow2">#B3A125</color>
+    <color name="pokemon_border">#3B4CCA</color>
+    <color name="charmander_background">#246B6D</color>
+    <color name="bulbasaur_background">#79C5A0</color>
+    <color name="squirtle_background">#85C4D8</color>
+</resources>
