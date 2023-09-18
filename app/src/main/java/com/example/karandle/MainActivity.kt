@@ -58,9 +58,10 @@ class MainActivity : AppCompatActivity() {
             binding.easy.visibility = View.INVISIBLE
             binding.medium.visibility = View.INVISIBLE
             binding.hard.visibility = View.INVISIBLE
-            binding.wordTheme.visibility = View.INVISIBLE
+            binding.spinnerLayout.visibility = View.INVISIBLE
             binding.wordThemeTxt.visibility = View.INVISIBLE
 
+            binding.reminder.visibility = View.VISIBLE
             binding.g1l1.visibility = View.VISIBLE
             binding.g1l2.visibility = View.VISIBLE
             binding.g1l3.visibility = View.VISIBLE
@@ -111,6 +112,7 @@ class MainActivity : AppCompatActivity() {
         // This function transitions to the end screen.
         var winner = false
         fun transitionToEnd() {
+            binding.reminder.visibility = View.INVISIBLE
             binding.g1l1.visibility = View.INVISIBLE
             binding.g1l2.visibility = View.INVISIBLE
             binding.g1l3.visibility = View.INVISIBLE
@@ -349,7 +351,7 @@ class MainActivity : AppCompatActivity() {
         binding.retry.setOnClickListener {
             finish()
             startActivity(getIntent())
-            overridePendingTransition(0,0);
+            overridePendingTransition(0,0)
         }
     }
 }

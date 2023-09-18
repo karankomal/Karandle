@@ -5,7 +5,7 @@
     xmlns:strokeAttrs="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@color/vanilla"
     tools:context=".MainActivity">
 
     <com.example.karandle.StrokedTextView
@@ -15,12 +15,12 @@
         android:text="@string/title"
         android:fontFamily="@font/luckiest_guy"
         android:textSize="60sp"
-        android:textColor="@color/pokemon_yellow"
+        android:textColor="#28AFB0"
         android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        strokeAttrs:textStrokeColor="@color/pokemon_border"
+        strokeAttrs:textStrokeColor="@color/onyx"
         strokeAttrs:textStrokeWidth="3"
         android:visibility="visible"/>
 
@@ -29,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/difficulty_txt"
-        android:textColor="@color/pokemon_yellow"
+        android:textColor="#4C5760"
         android:textSize="28sp"
         android:layout_marginTop="75dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,6 +45,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/difficulty_txt"
         android:layout_marginTop="75dp"
+        android:textColor="@color/onyx"
         android:visibility="visible"/>
     <Button
         android:id="@+id/medium"
@@ -55,6 +56,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/easy"
         android:layout_marginTop="15dp"
+        android:textColor="@color/onyx"
         android:visibility="visible"/>
     <Button
         android:id="@+id/hard"
@@ -65,32 +67,49 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/medium"
         android:layout_marginTop="15dp"
+        android:textColor="@color/onyx"
         android:visibility="visible"/>
     <com.example.karandle.StrokedTextView
         android:id="@+id/word_theme_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Word Theme:"
-        android:textColor="@color/pokemon_yellow"
+        android:textColor="@color/onyx"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/word_theme"
+        app:layout_constraintBottom_toTopOf="@id/spinnerLayout"
         android:visibility="visible"/>
-    <Spinner
-        android:id="@+id/word_theme"
+    <RelativeLayout
+        android:id="@+id/spinnerLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hard"
-        android:background="@android:drawable/btn_dropdown"
-        android:spinnerMode="dropdown"
-        android:visibility="visible"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/hard">
+        <Spinner
+            android:id="@+id/word_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            android:visibility="visible" />
+    </RelativeLayout>
 
-
+    <com.example.karandle.StrokedTextView
+        android:id="@+id/reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Green - Correct Letter in correct place!\nYellow - Correct Letter in wrong place!\nRed - Wrong Letter!"
+        android:textAlignment="center"
+        android:textColor="@color/onyx"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:layout_marginTop="15dp"
+        android:visibility="invisible"/>
     <EditText
         android:id="@+id/g1l1"
         android:inputType="textCapSentences"
@@ -101,7 +120,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginBottom="300dp"
+        android:layout_marginBottom="225dp"
         android:layout_marginStart="55dp"
         android:background="@drawable/letter_background"
         android:textSize="24sp"
@@ -116,7 +135,7 @@
         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="300dp"
+        android:layout_marginBottom="225dp"
         android:background="@drawable/letter_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/g1l1"
@@ -134,7 +153,7 @@
         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="300dp"
+        android:layout_marginBottom="225dp"
         android:background="@drawable/letter_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/g1l2"
@@ -152,7 +171,7 @@
         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="300dp"
+        android:layout_marginBottom="225dp"
         android:background="@drawable/letter_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/g1l3"
@@ -448,8 +467,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/onyx"
         android:visibility="invisible"
-        android:layout_marginBottom="80dp"/>
+        android:layout_marginBottom="70dp"/>
 
     <nl.dionsegijn.konfetti.xml.KonfettiView
         android:id="@+id/confetti"
@@ -464,7 +484,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CONGRATULATIONS!"
-        android:textColor="@color/pokemon_yellow"
+        android:textColor="@color/onyx"
         android:textSize="30sp"
         android:layout_marginTop="75dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -476,7 +496,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="The word was: {wordToGuess}"
-        android:textColor="@color/pokemon_yellow"
+        android:textColor="@color/onyx"
         android:textSize="24sp"
         android:textAlignment="center"
         android:layout_marginTop="75dp"
@@ -493,6 +513,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:visibility="invisible"
+        android:textColor="@color/onyx"
         android:layout_marginBottom="250dp"/>
 
 

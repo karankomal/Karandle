@@ -8,4 +8,11 @@
     <color name="charmander_background">#246B6D</color>
     <color name="bulbasaur_background">#79C5A0</color>
     <color name="squirtle_background">#85C4D8</color>
+    <color name="burgandy">#800020</color>
+    <color name="fire_engine_red">#C1292E</color>
+    <color name="onyx">#393E41</color>
+    <color name="ash_gray">#BDBEA9</color>
+    <color name="outer_space">#4C5760</color>
+    <color name="verdigris">#28AFB0</color>
+    <color name="vanilla">#EAE2B7</color>
 </resources>
