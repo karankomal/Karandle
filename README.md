@@ -1,10 +1,10 @@
-# Android Project 1 - Karandle
+# Android Project 1 - *Karandle*
 
-Submitted by: Karan Komal
+Submitted by: **Karan Komal**
 
-Karan Komal is an Android app that recreates a simple version of the popular word game [Wordle](https://www.nytimes.com/games/wordle/index.html). 
+**Karandle** is an Android app that recreates a simple version of the popular word game [Wordle](https://www.nytimes.com/games/wordle/index.html). 
 
-Time spent: 8 hours spent in total
+Time spent: **8** hours spent in total
 
 ## Required Features
 
